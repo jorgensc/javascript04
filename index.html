@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="icon" href="img/js.png"/>
+    <title>JavaScript</title>
+  </head>
+  <body style="background-color: #dddddd;">
+    <div class="container">
+              <!--Calculadora Média-->
+              <div class="card text-center mb-3 mt-3">
+                <div class="card-header">
+                  <h3>Calculadora</h3>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Calcular a média aritmética de 3 notas</h5>
+                  <form>
+                    <input class="form-control mb-2" id="media1" placeholder="Digite a primeira nota">
+                    <input class="form-control mb-2" id="media2" placeholder="Digite a segunda nota">
+                    <input class="form-control mb-2" id="media3" placeholder="Digite a terceira nota">
+                    <button type="button" class="btn btn-dark" id="btnmedia" onclick="calcular()">Calcular</button>
+                  </form>
+                </div>
+                <div class="card-footer" id="resultadomedia">
+                  <h5>Resultado</h5>
+                </div>
+              </div>
+              <!--Categorias Nadador-->
+              <div class="card text-center mb-3">
+                <div class="card-header">
+                  <h3>Categorias Nadador</h3>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Classifique-se em uma categoria digitando sua idade</h5>
+                  <form>
+                    <input class="form-control mb-2" id="idade" placeholder="Digite sua idade">
+                    <button type="button" class="btn btn-dark" id="btnnadador" onclick="categoria()">Classifique-se</button>
+                  </form>
+                </div>
+                <div class="card-footer" id="classificacao">
+                  <h5>Categoria</h5>
+                </div>
+              </div>
+              <!--Tabuada-->
+              <div class="card text-center mb-3">
+                <div class="card-header">
+                  <h3>Tabuada</h3>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Digite um Número e calcule a tabuada</h5>
+                  <form>
+                    <input class="form-control mb-2" id="num" placeholder="Digite aqui">
+                    <button type="button" class="btn btn-dark" id="btntabuada" onclick="tabuada()">Calcular</button>
+                  </form>
+                </div>
+                <div class="card-footer" id="resultado">
+                  <h5>Resultado</h5>
+                </div>
+              </div>
+              <!--Janela-->
+              <div class="card text-center mb-3">
+                <div class="card-header">
+                  <h3>Meça sua Janela</h3>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Digite a largura e altura</h5>
+                  <form>
+                    <input class="form-control mb-2" id="largura" placeholder="Digite a Largura">
+                    <input class="form-control mb-2" id="altura" placeholder="Digite a Altura">
+                    <button type="button" class="btn btn-dark" id="btnjan" onclick="janela()">Medir</button>
+                  </form>
+                </div>
+                <div class="card-footer" id="medidajanela" >
+                  <h5>Medida</h5>
+                </div>
+              </div>
+              <!--Atraso Juros-->
+              <div class="card text-center mb-3">
+                <div class="card-header">
+                  <h3>Soma Juros da parcela</h3>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Digite o valor e quantidade de dias de atraso</h5>
+                  <form>
+                    <input class="form-control mb-2" id="valor" placeholder="Digite o Valor da parcela">
+                    <input class="form-control mb-2" id="dias" placeholder="Digite quantos dias de atraso">
+                    <button type="button" class="btn btn-dark" id="btnjan" onclick="parcela()">Enviar</button>
+                  </form>
+                </div>
+                <div class="card-footer" id="resultadojuros" >
+                  <h5>Juros</h5>
+                </div>
+                <div class="card-footer" id="resultadototal" >
+                  <h5>Total</h5>
+                </div>
+              </div>
+              <!--Números p,n,n-->
+              <div class="card text-center mb-3">
+                <div class="card-header">
+                  <h3>Descubra se o número é Positivo, Negativo ou Neutro</h3>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Digite o número e descubra</h5>
+                  <form>
+                    <input class="form-control mb-2" id="numpnn" placeholder="Digite o número">
+                    <button type="button" class="btn btn-dark" id="btnpnn" onclick="numero()">Enviar</button>
+                  </form>
+                </div>
+                <div class="card-footer" id="resultadonumeros">
+                  <h5>Positivo, negativo ou neutro</h5>
+                </div>
+              </div>
+              <!--Menor numero-->
+              <div class="card text-center mb-3">
+                <div class="card-header">
+                  <h3>Qual o menor número informado</h3>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Digite o número e descubra qual é o menor</h5>
+                  <form>
+                    <input class="form-control mb-2" id="numm1" placeholder="Digite o primeiro número">
+                    <input class="form-control mb-2" id="numm2" placeholder="Digite o segundo número">
+                    <button type="button" class="btn btn-dark" id="btnmenor" onclick="menor()">Enviar</button>
+                  </form>
+                </div>
+                <div class="card-footer" id="resultadomenor">
+                  <h5>Resultado</h5>
+                </div>
+              </div>
+              <!--Soma 4 num-->
+              <div class="card text-center mb-3">
+                <div class="card-header">
+                  <h3>Calculador</h3>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Qual soma é maior</h5>
+                  <form>
+                    <input class="form-control mb-2" id="p1" placeholder="Digite o primeiro número">
+                    <input class="form-control mb-2" id="p2" placeholder="Digite o segundo número">
+                    <hr>
+                    <input class="form-control mb-2" id="m1" placeholder="Digite o terceiro número">
+                    <input class="form-control mb-2" id="m2" placeholder="Digite o quarto número">
+                    <button type="button" class="btn btn-dark" id="btnmedia" onclick="soma()">Enviar</button>
+                  </form>
+                </div>
+                <div class="card-footer" id="resultadosoma">
+                  <h5>Resultado</h5>
+                </div>
+              </div>
+              <!--Data em dias-->
+              <div class="card text-center mb-3">
+                <div class="card-header">
+                  <h3>Conversor de idade em dias</h3>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Informe sua idade em anos ou meses</h5>
+                  <form>
+                    <input class="form-control mb-2" id="anos" placeholder="Digite sua idade em Anos">
+                    <input class="form-control mb-2" id="meses" placeholder="Digite sua idade em Meses">
+                    <button type="button" class="btn btn-dark" id="btnmedia" onclick="idade()">Enviar</button>
+                  </form>
+                </div>
+                <div class="card-footer" id="resultadoidade">
+                  <h5>Resultado</h5>
+                </div>
+              </div>
+              <!--Expo img-->
+              <div class="card text-center mb-3">
+                <div class="card-header">
+                  <h3>Clique no botão e revele imagens secretas</h3>
+                </div>
+                <div class="card-footer">
+                  <button type="button" class="btn btn-dark" id="btnmedia" onclick="imagens()">Exibir</button>
+                </div>
+                <div class="card-footer" id="exibiraqui">
+                </div>
+              </div>
+    </div>
+
+    <!--JavaScript-->
+    <!--jQuery primeiro, depois Popper.js, depois Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!--Script Cálculo-->
+    <script>
+          function calcular(){
+            let nota1 = parseFloat(document.getElementById("media1").value);
+            let nota2 = parseFloat(document.getElementById("media2").value);
+            let nota3 = parseFloat(document.getElementById("media3").value);
+            let mediatotal = (nota1 + nota2 + nota3)/3;
+            if(mediatotal >= 7){
+              document.getElementById('resultadomedia').innerHTML = 'Aprovado!';
+            }  
+            else{
+            document.getElementById('resultadomedia').innerHTML = 'Reprovado!';
+            }
+          }
+    </script>
+    <!--Script Nadador-->
+    <script>
+          function categoria(){
+            let idadenad = parseInt(document.getElementById("idade").value);
+            if(isNaN(idade)){
+              document.getElementById('classificacao').innerHTML = 'Valor Inválido';
+            }
+            if(idadenad >= 5 && idadenad <= 7){
+              document.getElementById('classificacao').innerHTML = 'Infantil';
+            }  
+            else if(idadenad >= 8 && idadenad <= 13){
+              document.getElementById('classificacao').innerHTML = 'Juvenil';
+            }
+            else if(idadenad >= 14 && idadenad <= 17){
+              document.getElementById('classificacao').innerHTML = 'Adolescente';
+            }
+            else if(idadenad >=18){
+              document.getElementById('classificacao').innerHTML = 'Adulto';
+            }
+          }
+    </script>
+    <!--Script Tabuada-->
+    <script>
+          function tabuada(){
+            var num = parseInt(document.getElementById("num").value);
+            var resposta = document.getElementById('resultado');
+            var tabuada='';
+            for(var tab=1; tab<=10 ; tab ++)
+            tabuada += num + " x " + tab + " = "+ num * tab + "<br />";
+            resposta.innerHTML = tabuada;
+            if(isNaN(num)){
+              document.getElementById('resultado').innerHTML = 'Valor Inválido';
+            }
+          }
+    </script>
+    <!--Script Janela-->
+    <script>
+        function janela(){
+          var m2;
+          let alt = parseFloat(document.getElementById('altura').value);
+          let lar = parseFloat(document.getElementById('largura').value);
+          m2 = alt * lar
+          document.getElementById('medidajanela').innerHTML = 'Sua janela tem ' + m2 + ' m²';
+        }
+    </script>
+    <!--Atraso Juros-->
+    <script>
+        function parcela(){
+          let conta = parseFloat(document.getElementById('valor').value);
+          let diasatraso = parseInt(document.getElementById('dias').value);
+          var juros = 0.02;
+          var totjuros = (diasatraso * juros * conta);
+          var totconta = totjuros + conta;
+          document.getElementById('resultadojuros').innerHTML = 'Total de juros: ' + totjuros;
+          document.getElementById('resultadototal').innerHTML = 'Valor total prestação: ' + totconta;
+        }
+    </script>
+    <!--Numero P,N,N-->
+    <script>
+      function numero(){
+        let num = parseInt(document.getElementById('numpnn').value);
+        if(num < 0){
+          document.getElementById('resultadonumeros').innerHTML = num + ' é Negativo';
+        }
+        else if (num > 0){
+          document.getElementById('resultadonumeros').innerHTML = num + ' é Positivo';
+        }
+        else if (num == 0){
+          document.getElementById('resultadonumeros').innerHTML = num + ' é Neutro';
+        }
+        if(isNaN(num)){
+              document.getElementById('resultadonumeros').innerHTML = 'Valor Inválido';
+            }
+      }
+    </script>
+    <!--Menor numero-->
+    <script>
+      function menor(){
+        let num1 = parseFloat(document.getElementById('numm1').value);
+        let num2 = parseFloat(document.getElementById('numm2').value);
+
+        if(num1 > num2){
+          document.getElementById('resultadomenor').innerHTML = 'O primeiro numero informado é maior ' + num1;
+        }
+        else if(num2 > num1){
+          document.getElementById('resultadomenor').innerHTML = 'O segundo numero informado é maior ' + num2;
+        }
+        else if(num1 == num2){
+          document.getElementById('resultadomenor').innerHTML = 'Os valores são iguais';
+        }
+      }
+    </script>
+    <!--Soma maior-->
+    <script>
+      function soma(){
+        let ap = parseFloat(document.getElementById('p1').value);
+        let bp = parseFloat(document.getElementById('p2').value);
+        let am = parseFloat(document.getElementById('m1').value);
+        let bm = parseFloat(document.getElementById('m2').value);
+        var soma1 = ap + bp;
+        var soma2 = am + bm;
+        if(soma1 > soma2){
+          document.getElementById('resultadosoma').innerHTML = 'Soma dos 2 primeiros numeros é maior';
+        }
+        else if(soma2 > soma1){
+          document.getElementById('resultadosoma').innerHTML = 'Soma dos 2 ultimos numeros é maior';
+        }
+        else if(soma1 == soma2){
+          document.getElementById('resultadosoma').innerHTML = 'As somas são idênticas';
+        }
+      }
+    </script>
+    <!--Idade dias-->
+    <script>
+      function idade(){
+      let anos = parseInt(document.getElementById('anos').value);
+      let meses = parseInt(document.getElementById('meses').value);
+      var convanos = anos * 365;
+      var convmeses = meses * 30;
+      if(anos > 0){
+        document.getElementById('resultadoidade').innerHTML = 'Sua idade convertida de anos em dias é ' + convanos;
+      }
+      else if(meses > 0){
+        document.getElementById('resultadoidade').innerHTML = 'Sua idade convertida de meses em dias é ' + convmeses;
+      }
+    }
+    </script>
+    <!--Imgens-->
+    <script>
+      function imagens(){
+        for (i=0;i<10;i++){
+          var img = document.createElement('img');
+            img.src = 'img/b.jpg';
+            img.style = 'width: 200px; margin: 3px';
+            img.className = 'col';
+          document.getElementById('exibiraqui').appendChild(img);
+        }
+      }
+    </script>
+</body>
+</html>
